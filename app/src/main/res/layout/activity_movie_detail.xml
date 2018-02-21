@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="TextView" />
+
+            <ImageView
+                android:id="@+id/poster"
+                android:layout_width="140dp"
+                android:layout_height="230dp"
+                android:gravity="center_horizontal"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/description_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="TextView" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:id="@+id/r_group">
+
+                <RadioButton
+                    android:id="@+id/seen_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_weight="1"
+                    android:text="Has Seen" />
+
+                <RadioButton
+                    android:id="@+id/seen_yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_weight="1"
+                    android:text="Has Not Seen" />
+
+                <RadioButton
+                    android:id="@+id/like"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Liked" />
+            </RadioGroup>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                android:id="@+id/submit_button"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
